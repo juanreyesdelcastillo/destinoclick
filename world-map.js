@@ -2,16 +2,16 @@
 // Llama a window.__dcSelectRegion(key) al hacer clic en una región.
 (function () {
   const REGIONS = {
-    america: { label: 'AMÉRICA', at: [-99, 23], ids: ['484', '840', '124', '076', '032', '604', '152', '170', '218', '862'] },
-    caribe: { label: 'CARIBE', at: [-73, 18], ids: ['214', '192', '388', '188', '591', '332', '630', '084', '320', '222'] },
-    europa: { label: 'EUROPA', at: [8, 48], ids: ['724', '250', '380', '826', '620', '276', '300', '040', '528', '056', '756'] },
-    medio: { label: 'MEDIO ORIENTE', at: [47, 26], ids: ['784', '792', '400', '634', '682', '818', '512', '414', '048'] },
-    asia: { label: 'ASIA', at: [104, 17], ids: ['392', '764', '360', '704', '156', '356', '458', '410', '608', '116'] },
-    cruceros: { label: 'CRUCEROS', at: [-42, 31], ids: [], ocean: true }
+    mexico: { label: 'MÉXICO', at: [-102, 23], ids: ['484'] },
+    caribe: { label: 'CARIBE Y CENTROAMÉRICA', at: [-80, 13], ids: ['214', '192', '388', '188', '320', '340', '222', '558', '591', '084', '044', '630', '332'] },
+    europa: { label: 'EUROPA', at: [4, 45], ids: ['724', '380', '250', '620'] },
+    asia: { label: 'ASIA Y MEDIO ORIENTE', at: [70, 26], ids: ['462', '392', '792', '784'] },
+    cruceros: { label: 'CRUCEROS', at: [-45, 28], ids: [], ocean: true },
+    tours: { label: 'TOURS PREMIUM', at: [-30, -18], ids: [], ocean: true }
   };
   const ROUTES = [
-    ['america', 'europa'], ['europa', 'asia'], ['europa', 'medio'],
-    ['caribe', 'cruceros'], ['cruceros', 'europa'], ['america', 'caribe']
+    ['mexico', 'europa'], ['europa', 'asia'], ['mexico', 'caribe'],
+    ['caribe', 'cruceros'], ['cruceros', 'europa'], ['mexico', 'asia']
   ];
   const GOLD = '#e6b063';
   const NS = 'http://www.w3.org/2000/svg';
